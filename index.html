@@ -3,191 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İlqar Əlfioğlu — Rəsmi Ədəbiyyat, Tərcümə və Televiziya Arxivi</title>
+    <title>İlqar Əlfioğlu & Əlfi Qasımov — Rəsmi Ədəbiyyat, Tərcümə və Televiziya Arxivi</title>
     <style>
         :root {
-            --bg-color: #f9f6f0;
+            --bg-color: #f9f7f2;
+            --header-bg: #1e1d1b;
+            --accent-color: #8b261d;
+            --text-dark: #222222;
+            --text-muted: #5a5a5a;
             --card-bg: #ffffff;
-            --text-color: #2c2a29;
-            --accent-color: #8b3a3a;
             --border-color: #e2dcd0;
         }
-
-        body {
-            font-family: 'Georgia', serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            line-height: 1.7;
         }
-
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.65;
+        }
         header {
-            background-color: #2c2a29;
-            color: #f9f6f0;
-            text-align: center;
-            padding: 40px 20px 25px;
+            background-color: var(--header-bg);
+            color: #ffffff;
+            padding: 35px 20px;
             border-bottom: 4px solid var(--accent-color);
         }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.4em;
-            letter-spacing: 1px;
-        }
-
-        header p {
-            margin: 10px 0 0;
-            font-style: italic;
-            color: #d0c8bc;
-            font-size: 1.1em;
-        }
-
-        /* Bölmələr Menyusu */
-        nav {
-            background-color: #3a3735;
+        .header-container {
+            max-width: 1100px;
+            margin: 0 auto;
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 8px;
-            padding: 12px 15px;
-            border-bottom: 1px solid #222;
-        }
-
-        .nav-btn {
-            background-color: transparent;
-            color: #e6dfd5;
-            border: 1px solid #5a5550;
-            padding: 8px 14px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-family: sans-serif;
-            font-size: 0.9em;
-            transition: all 0.2s;
-        }
-
-        .nav-btn:hover, .nav-btn.active {
-            background-color: var(--accent-color);
-            color: #ffffff;
-            border-color: var(--accent-color);
-        }
-
-        .container {
-            max-width: 960px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-
-        .intro {
-            background: var(--card-bg);
-            padding: 20px 25px;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            margin-bottom: 30px;
-            text-align: center;
-            font-size: 1.02em;
-        }
-
-        .section-heading {
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 8px;
-            margin-bottom: 20px;
-            color: var(--accent-color);
-            font-size: 1.5em;
-        }
-
-        .items-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            align-items: center;
+            justify-content: space-between;
             gap: 20px;
         }
-
-        .card {
-            background: var(--card-bg);
+        .author-profile {
+            text-align: center;
+            width: 180px;
+            flex-shrink: 0;
+        }
+        .author-profile img {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+            background-color: #2c2a27;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        }
+        .author-profile h3 {
+            font-size: 1.15rem;
+            color: #ffffff;
+            margin-bottom: 3px;
+        }
+        .author-profile p {
+            font-size: 0.85rem;
+            color: #cccccc;
+            font-style: italic;
+        }
+        .header-title {
+            text-align: center;
+            flex-grow: 1;
+            padding: 0 15px;
+        }
+        .header-title h1 {
+            font-size: 2.3rem;
+            font-weight: normal;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+        .header-title p {
+            font-size: 1.05rem;
+            color: #d6cfc2;
+            font-style: italic;
+        }
+        nav {
+            background-color: #2b2926;
+            padding: 12px 15px;
+            border-bottom: 1px solid #444;
+        }
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+        .nav-btn {
+            background: transparent;
+            border: 1px solid #555;
+            color: #f0ece1;
+            padding: 8px 14px;
+            cursor: pointer;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 0.9rem;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+        .nav-btn:hover, .nav-btn.active {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: #ffffff;
+        }
+        .nav-divider {
+            width: 2px;
+            height: 24px;
+            background-color: #666;
+            margin: 0 6px;
+        }
+        main {
+            max-width: 1050px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+        .intro-box {
+            background-color: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 20px;
+            border-left: 5px solid var(--accent-color);
+            padding: 20px 25px;
+            margin-bottom: 35px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 1.05rem;
+        }
+        .section-heading {
+            font-size: 1.6rem;
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-bottom: 25px;
+        }
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 22px;
+        }
+        .work-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 22px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
-
-        .tag-row {
+        .work-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+        }
+        .work-meta {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 10px;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 0.8rem;
         }
-
-        .book-tag {
-            background: #efeae1;
-            color: var(--accent-color);
-            font-size: 0.8em;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-family: sans-serif;
+        .work-category {
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+        .badge {
+            padding: 3px 9px;
+            border-radius: 12px;
             font-weight: bold;
+            font-size: 0.78rem;
         }
-
-        .price-tag {
-            font-family: sans-serif;
-            font-size: 0.85em;
-            font-weight: bold;
-            padding: 3px 8px;
-            border-radius: 4px;
+        .badge-free {
+            background-color: #e6f4ea;
+            color: #137333;
         }
-
-        .price-paid {
-            background: #fdf2f2;
-            color: #a32a2a;
-            border: 1px solid #e6b8b8;
+        .badge-paid {
+            background-color: #fce8e6;
+            color: #c5221f;
         }
-
-        .price-free {
-            background: #eef7ee;
-            color: #256e25;
-            border: 1px solid #b8deb8;
+        .work-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
         }
-
-        .card h3 {
-            margin: 0 0 10px;
-            font-size: 1.25em;
+        .work-excerpt {
+            font-size: 0.95rem;
+            color: #444;
+            margin-bottom: 18px;
         }
-
-        .card p {
-            font-size: 0.95em;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        .btn {
-            background-color: var(--accent-color);
-            color: white;
+        .read-btn {
+            background-color: var(--header-bg);
+            color: #fff;
             border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
+            padding: 10px 16px;
+            border-radius: 4px;
             cursor: pointer;
-            font-size: 0.95em;
-            font-family: sans-serif;
-            text-align: center;
-            text-decoration: none;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 0.92rem;
             transition: background 0.2s;
+            width: 100%;
         }
-
-        .btn:hover {
-            background-color: #6e2b2b;
+        .read-btn:hover {
+            background-color: var(--accent-color);
         }
-
-        .btn-video {
-            background-color: #2c4c6e;
-        }
-
-        .btn-video:hover {
-            background-color: #1e354d;
-        }
-
-        /* Oxu və Video Pəncərəsi (Modal) */
         .modal {
             display: none;
             position: fixed;
@@ -196,165 +218,341 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.75);
+            background-color: rgba(0,0,0,0.65);
             overflow-y: auto;
+            padding: 30px 15px;
         }
-
         .modal-content {
-            background-color: #fffdf9;
-            margin: 35px auto;
-            padding: 30px;
+            background-color: #fff;
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 35px;
             border-radius: 8px;
-            max-width: 780px;
             position: relative;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
-
-        .close-btn {
+        .close-modal {
             position: absolute;
-            right: 20px;
             top: 15px;
+            right: 22px;
             font-size: 28px;
-            cursor: pointer;
-            color: #666;
-        }
-
-        /* MƏTNİN VƏ ŞƏKİLLƏRİN KOPYALANMASINI BLOKLAYAN HİSSƏ */
-        .protected-text {
-            -webkit-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            font-size: 1.12em;
-            line-height: 1.8;
-            text-align: justify;
-            margin-top: 20px;
-        }
-
-        .protected-text img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-            border-radius: 6px;
-            pointer-events: none;
-        }
-
-        /* Video Çərçivəsi */
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            margin-top: 20px;
-            border-radius: 6px;
-            background: #000;
-        }
-
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        .paywall-box {
-            background-color: #f4efe6;
-            border: 2px dashed var(--accent-color);
-            padding: 25px;
-            border-radius: 8px;
-            margin-top: 25px;
-            text-align: center;
-            font-family: sans-serif;
-        }
-
-        .card-number {
-            background: #fff;
-            padding: 10px 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1.2em;
             font-weight: bold;
-            letter-spacing: 1px;
-            display: inline-block;
-            margin: 10px 0;
+            color: #666;
+            cursor: pointer;
+            background: none;
+            border: none;
         }
-
-        .password-area {
-            margin-top: 15px;
+        .close-modal:hover {
+            color: var(--accent-color);
+        }
+        .modal-title {
+            font-size: 1.75rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            padding-right: 30px;
+        }
+        .modal-body-text {
+            font-size: 1.08rem;
+            line-height: 1.8;
+            white-space: pre-line;
+            color: #222;
+        }
+        .paywall-box {
+            margin-top: 25px;
+            padding: 25px;
+            background-color: #fdf8f6;
+            border: 1px solid #e6c5c0;
+            border-radius: 6px;
+            text-align: center;
+        }
+        .paywall-box h4 {
+            color: var(--accent-color);
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+        .card-number {
+            display: inline-block;
+            background: #fff;
+            border: 1px dashed var(--accent-color);
+            padding: 8px 18px;
+            font-family: monospace;
+            font-size: 1.15rem;
+            font-weight: bold;
+            margin: 12px 0;
+            letter-spacing: 1px;
+        }
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-family: 'Segoe UI', sans-serif;
+            font-weight: bold;
+            margin: 10px 0 18px;
+        }
+        .password-form {
             display: flex;
             justify-content: center;
             gap: 10px;
             flex-wrap: wrap;
-        }
-
-        .password-area input {
-            padding: 10px;
-            font-size: 1em;
-            border: 1px solid #bbb;
-            border-radius: 5px;
-            width: 210px;
-        }
-
-        .whatsapp-btn {
-            background-color: #25D366;
-            color: white;
-            display: inline-block;
             margin-top: 10px;
         }
-
-        .whatsapp-btn:hover {
-            background-color: #1ebe57;
+        .password-form input {
+            padding: 9px 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            width: 200px;
         }
-
+        .password-form button {
+            background-color: var(--accent-color);
+            color: #fff;
+            border: none;
+            padding: 9px 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .error-msg {
+            color: #c5221f;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 0.9rem;
+            margin-top: 8px;
+            display: none;
+        }
         footer {
+            background-color: var(--header-bg);
+            color: #aaa;
             text-align: center;
-            padding: 30px;
-            color: #777;
-            font-size: 0.9em;
-            margin-top: 40px;
-            border-top: 1px solid var(--border-color);
+            padding: 25px 15px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+            border-top: 3px solid var(--accent-color);
         }
-
-        @media print {
-            body { display: none !important; }
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            .header-title h1 {
+                font-size: 1.8rem;
+            }
+            .nav-divider {
+                display: none;
+            }
         }
     </style>
 </head>
-<body oncontextmenu="return false;">
+<body>
 
 <header>
-    <h1>İlqar Əlfioğlu</h1>
-    <p>Yazıçı, tərcüməçi, publisist və televiziya jurnalisti</p>
+    <div class="header-container">
+        <div class="author-profile">
+            <img src="ilqar.jpg" alt="İlqar Əlfioğlu">
+            <h3>İlqar Əlfioğlu</h3>
+            <p>Yazıçı, tərcüməçi, jurnalist</p>
+        </div>
+
+        <div class="header-title">
+            <h1>İlqar Əlfioğlu & Əlfi Qasımov</h1>
+            <p>Rəsmi Ədəbiyyat, Tərcümə, Publisistika və Televiziya Arxivi</p>
+        </div>
+
+        <div class="author-profile">
+            <img src="%C9%99lfi.jpg" alt="Əlfi Qasımov">
+            <h3>Əlfi Qasımov</h3>
+            <p>Yazıçı, publisist</p>
+        </div>
+    </div>
 </header>
 
-<nav id="categoryNav">
-    <button class="nav-btn active" onclick="filterItems('all', this)">Bütün Bölmələr</button>
-    <button class="nav-btn" onclick="filterItems('bedii', this)">Bədii əsərlərim və oçerklər</button>
-    <button class="nav-btn" onclick="filterItems('tercume', this)">Tərcümə əsərlərim</button>
-    <button class="nav-btn" onclick="filterItems('elfi', this)">Əlfi Qasımovun bədii əsərləri</button>
-    <button class="nav-btn" onclick="filterItems('publisistika', this)">Publisistikam (Pulsuz)</button>
-    <button class="nav-btn" onclick="filterItems('tv', this)">Televiziya verilişləri və filmlərim</button>
+<nav>
+    <div class="nav-container">
+        <button class="nav-btn active" onclick="filterWorks('all', this)">Bütün Bölmələr</button>
+        <button class="nav-btn" onclick="filterWorks('ilqar-bedii', this)">Bədii əsərlərim və oçerklər</button>
+        <button class="nav-btn" onclick="filterWorks('tercume', this)">Tərcümə əsərlərim</button>
+        <button class="nav-btn" onclick="filterWorks('publisistika', this)">Publisistikam (Pulsuz)</button>
+        <button class="nav-btn" onclick="filterWorks('tv', this)">Televiziya verilişləri və filmlərim</button>
+        <span class="nav-divider"></span>
+        <button class="nav-btn" onclick="filterWorks('elfi-bedii', this)">Əlfi Qasımovun bədii əsərləri</button>
+    </div>
 </nav>
 
-<div class="container">
-    <div class="intro">
-        <p>Əziz oxucular və izləyicilər! Bu səhifədə həm publisistik yazılarımı və televiziya verilişlərimi <strong>pulsuz</strong> izləyə, həm də bədii kitablarımı, tərcümələrimi və yazıçı Əlfi Qasımovun əsərlərini cəmi <strong>1 AZN</strong> ödəməklə tam şəkildə oxuya bilərsiniz.</p>
+<main>
+    <div class="intro-box">
+        Əziz oxucular və izləyicilər! Bu səhifədə həm publisistik yazılarımı və televiziya verilişlərimi <strong>pulsuz</strong> izləyə, həm də bədii kitablarımı, tərcümələrimi və yazıçı Əlfi Qasımovun əsərlərini cəmi <strong>1 AZN</strong> ödəməklə tam şəkildə oxuya bilərsiniz.
     </div>
 
-    <h2 class="section-heading" id="currentHeading">Bütün Əsərlər və Verilişlər</h2>
-    <div class="items-grid" id="itemsContainer"></div>
+    <h2 class="section-heading" id="sectionTitle">Bütün Əsərlər və Verilişlər</h2>
+    <div class="works-grid" id="worksContainer"></div>
+</main>
+
+<div id="workModal" class="modal">
+    <div class="modal-content">
+        <button class="close-modal" onclick="closeModal()">&times;</button>
+        <h2 class="modal-title" id="modalTitle">Başlıq</h2>
+        <div class="modal-body-text" id="modalPreview"></div>
+
+        <div class="paywall-box" id="paywallBox" style="display:none;">
+            <h4>Əsərin tam mətnini oxumaq üçün</h4>
+            <p>Bu əsərin davamını oxumaq üçün aşağıdakı karta <strong>1 AZN</strong> ödəniş edib qəbzi WhatsApp nömrəmizə göndərin. Sizə dərhal giriş şifrəsi təqdim olunacaq.</p>
+            <div class="card-number">4169 7388 XXXX XXXX</div><br>
+            <a class="whatsapp-btn" href="https://wa.me/994500000000" target="_blank">WhatsApp ilə qəbz göndər</a>
+            <div class="password-form">
+                <input type="text" id="passwordInput" placeholder="Şifrəni daxil edin">
+                <button onclick="checkPassword()">Tam mətni aç</button>
+            </div>
+            <div class="error-msg" id="errorMsg">Şifrə yanlışdır. Zəhmət olmasa yenidən yoxlayın.</div>
+        </div>
+    </div>
 </div>
 
-<!-- Oxu və Video Pəncərəsi -->
-<div id="readerModal" class="modal">
-    <div class="modal-content">
-        <span class="close-btn" onclick="closeModal()">&times;</span>
-        <h2 id="modalTitle">Başlıq</h2>
-        
-        <!-- Video Pəncərəsi (Yalnız TV bölməsi üçün açılır) -->
-        <div id="videoArea" style="display: none;">
-            <div class="video-wrapper">
-                <iframe id="youtubeFrame" src="" allowfullscreen></iframe>
-            </div>
+<footer>
+    © 2026 İlqar Əlfioğlu. Bütün hüquqlar qorunur. Mətnlərin icazəsiz kopyalanması və yayılması qadağandır.
+</footer>
+
+<script>
+    const worksData = [
+        {
+            id: 1,
+            category: 'ilqar-bedii',
+            categoryName: 'Bədii əsərlərim və oçerklər',
+            title: 'Nümunə Bədii Əsər (İlqar Əlfioğlu)',
+            isFree: false,
+            password: '123',
+            preview: 'Burada sizin bədii əsərinizin və ya oçerkinizin giriş hissəsi görünəcək. Oxucular əsərin başlanğıcını sərbəst oxuya biləcəklər...',
+            fullText: 'Burada sizin bədii əsərinizin və ya oçerkinizin giriş hissəsi görünəcək. Oxucular əsərin başlanğıcını sərbəst oxuya biləcəklər...
+
+[Şifrə daxil edildikdən sonra açılan tam mətn hissəsi buraya yerləşdiriləcək.]'
+        },
+        {
+            id: 2,
+            category: 'tercume',
+            categoryName: 'Tərcümə əsərlərim',
+            title: 'Nümunə Tərcümə Əsəri',
+            isFree: false,
+            password: '123',
+            preview: 'Dünya ədəbiyyatından etdiyiniz tərcümənin giriş hissəsi burada oxuculara təqdim olunur...',
+            fullText: 'Dünya ədəbiyyatından etdiyiniz tərcümənin giriş hissəsi burada oxuculara təqdim olunur...
+
+[Tərcümə əsərinin tam mətni şifrə daxil edildikdən sonra burada görünəcək.]'
+        },
+        {
+            id: 3,
+            category: 'publisistika',
+            categoryName: 'Publisistikam (Pulsuz)',
+            title: 'Nümunə Publisistik Məqalə',
+            isFree: true,
+            preview: 'Bu bölmədəki publisistik yazılarınız və esseləriniz bütün oxucular üçün tamamilə pulsuz açıqdır.',
+            fullText: 'Bu bölmədəki publisistik yazılarınız və esseləriniz bütün oxucular üçün tamamilə pulsuz açıqdır.
+
+Məqalənin tam mətni heç bir şifrə tələb olunmadan dərhal oxuna bilir.'
+        },
+        {
+            id: 4,
+            category: 'tv',
+            categoryName: 'Televiziya verilişləri və filmlərim',
+            title: 'Nümunə Televiziya Verilişi',
+            isFree: true,
+            preview: 'Müəllifi olduğunuz televiziya verilişləri, sənədli filmlər və müsahibələrin video keçidləri burada yerləşəcək.',
+            fullText: 'Müəllifi olduğunuz televiziya verilişləri, sənədli filmlər və müsahibələrin video keçidləri burada yerləşəcək.
+
+Buraya YouTube linkləri və veriliş haqqında geniş məlumat əlavə olunacaq.'
+        },
+        {
+            id: 5,
+            category: 'elfi-bedii',
+            categoryName: 'Əlfi Qasımovun bədii əsərləri',
+            title: 'Nümunə Əsər (Əlfi Qasımov)',
+            isFree: false,
+            password: '123',
+            preview: 'Yazıçı Əlfi Qasımovun bədii irsindən seçilmiş əsərin giriş hissəsi burada yerləşir...',
+            fullText: 'Yazıçı Əlfi Qasımovun bədii irsindən seçilmiş əsərin giriş hissəsi burada yerləşir...
+
+[Əsərin tam mətni 1 AZN ödəniş və şifrə ilə oxuculara təqdim olunur.]'
+        }
+    ];
+
+    let currentWork = null;
+
+    function renderWorks(filter) {
+        const container = document.getElementById('worksContainer');
+        container.innerHTML = '';
+        const filtered = filter === 'all' ? worksData : worksData.filter(w => w.category === filter);
+
+        filtered.forEach(work => {
+            const card = document.createElement('div');
+            card.className = 'work-card';
+            card.innerHTML = `
+                <div>
+                    <div class="work-meta">
+                        <span class="work-category">${work.categoryName}</span>
+                        <span class="badge ${work.isFree ? 'badge-free' : 'badge-paid'}">
+                            ${work.isFree ? 'Pulsuz' : '1 AZN'}
+                        </span>
+                    </div>
+                    <h3>${work.title}</h3>
+                    <p class="work-excerpt">${work.preview}</p>
+                </div>
+                <button class="read-btn" onclick="openWork(${work.id})">
+                    ${work.isFree ? 'Tam oxu / İzlə' : 'Oxu (Giriş pulsuz)'}
+                </button>
+            `;
+            container.appendChild(card);
+        });
+    }
+
+    function filterWorks(category, btnElement) {
+        document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+        btnElement.classList.add('active');
+        document.getElementById('sectionTitle').innerText = btnElement.innerText;
+        renderWorks(category);
+    }
+
+    function openWork(id) {
+        currentWork = worksData.find(w => w.id === id);
+        if (!currentWork) return;
+
+        document.getElementById('modalTitle').innerText = currentWork.title;
+        document.getElementById('errorMsg').style.display = 'none';
+        document.getElementById('passwordInput').value = '';
+
+        if (currentWork.isFree) {
+            document.getElementById('modalPreview').innerText = currentWork.fullText;
+            document.getElementById('paywallBox').style.display = 'none';
+        } else {
+            document.getElementById('modalPreview').innerText = currentWork.preview;
+            document.getElementById('paywallBox').style.display = 'block';
+        }
+
+        document.getElementById('workModal').style.display = 'block';
+    }
+
+    function checkPassword() {
+        const input = document.getElementById('passwordInput').value.trim();
+        if (currentWork && input === currentWork.password) {
+            document.getElementById('modalPreview').innerText = currentWork.fullText;
+            document.getElementById('paywallBox').style.display = 'none';
+            document.getElementById('errorMsg').style.display = 'none';
+        } else {
+            document.getElementById('errorMsg').style.display = 'block';
+        }
+    }
+
+    function closeModal() {
+        document.getElementById('workModal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        const modal = document.getElementById('workModal');
+        if (event.target === modal) {
+            closeModal();
+        }
+    };
+
+    renderWorks('all');
+</script>
+
+</body>
+</html>
