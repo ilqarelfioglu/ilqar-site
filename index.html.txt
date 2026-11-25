@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İlqar Əlfioğlu — Rəsmi Ədəbiyyat, Tərcümə və Televiziya Arxivi</title>
+    <style>
+        :root {
+            --bg-color: #f9f6f0;
+            --card-bg: #ffffff;
+            --text-color: #2c2a29;
+            --accent-color: #8b3a3a;
+            --border-color: #e2dcd0;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+
+        header {
+            background-color: #2c2a29;
+            color: #f9f6f0;
+            text-align: center;
+            padding: 40px 20px 25px;
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.4em;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-style: italic;
+            color: #d0c8bc;
+            font-size: 1.1em;
+        }
+
+        /* Bölmələr Menyusu */
+        nav {
+            background-color: #3a3735;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 12px 15px;
+            border-bottom: 1px solid #222;
+        }
+
+        .nav-btn {
+            background-color: transparent;
+            color: #e6dfd5;
+            border: 1px solid #5a5550;
+            padding: 8px 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: sans-serif;
+            font-size: 0.9em;
+            transition: all 0.2s;
+        }
+
+        .nav-btn:hover, .nav-btn.active {
+            background-color: var(--accent-color);
+            color: #ffffff;
+            border-color: var(--accent-color);
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .intro {
+            background: var(--card-bg);
+            padding: 20px 25px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 1.02em;
+        }
+
+        .section-heading {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+            font-size: 1.5em;
+        }
+
+        .items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        }
+
+        .tag-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .book-tag {
+            background: #efeae1;
+            color: var(--accent-color);
+            font-size: 0.8em;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+
+        .price-tag {
+            font-family: sans-serif;
+            font-size: 0.85em;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        .price-paid {
+            background: #fdf2f2;
+            color: #a32a2a;
+            border: 1px solid #e6b8b8;
+        }
+
+        .price-free {
+            background: #eef7ee;
+            color: #256e25;
+            border: 1px solid #b8deb8;
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            font-size: 1.25em;
+        }
+
+        .card p {
+            font-size: 0.95em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.95em;
+            font-family: sans-serif;
+            text-align: center;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #6e2b2b;
+        }
+
+        .btn-video {
+            background-color: #2c4c6e;
+        }
+
+        .btn-video:hover {
+            background-color: #1e354d;
+        }
+
+        /* Oxu və Video Pəncərəsi (Modal) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.75);
+            overflow-y: auto;
+        }
+
+        .modal-content {
+            background-color: #fffdf9;
+            margin: 35px auto;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 780px;
+            position: relative;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .close-btn {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            font-size: 28px;
+            cursor: pointer;
+            color: #666;
+        }
+
+        /* MƏTNİN VƏ ŞƏKİLLƏRİN KOPYALANMASINI BLOKLAYAN HİSSƏ */
+        .protected-text {
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-size: 1.12em;
+            line-height: 1.8;
+            text-align: justify;
+            margin-top: 20px;
+        }
+
+        .protected-text img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 6px;
+            pointer-events: none;
+        }
+
+        /* Video Çərçivəsi */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin-top: 20px;
+            border-radius: 6px;
+            background: #000;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .paywall-box {
+            background-color: #f4efe6;
+            border: 2px dashed var(--accent-color);
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 25px;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        .card-number {
+            background: #fff;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+
+        .password-area {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .password-area input {
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            width: 210px;
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1ebe57;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #777;
+            font-size: 0.9em;
+            margin-top: 40px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        @media print {
+            body { display: none !important; }
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+
+<header>
+    <h1>İlqar Əlfioğlu</h1>
+    <p>Yazıçı, tərcüməçi, publisist və televiziya jurnalisti</p>
+</header>
+
+<nav id="categoryNav">
+    <button class="nav-btn active" onclick="filterItems('all', this)">Bütün Bölmələr</button>
+    <button class="nav-btn" onclick="filterItems('bedii', this)">Bədii əsərlərim və oçerklər</button>
+    <button class="nav-btn" onclick="filterItems('tercume', this)">Tərcümə əsərlərim</button>
+    <button class="nav-btn" onclick="filterItems('elfi', this)">Əlfi Qasımovun bədii əsərləri</button>
+    <button class="nav-btn" onclick="filterItems('publisistika', this)">Publisistikam (Pulsuz)</button>
+    <button class="nav-btn" onclick="filterItems('tv', this)">Televiziya verilişləri və filmlərim</button>
+</nav>
+
+<div class="container">
+    <div class="intro">
+        <p>Əziz oxucular və izləyicilər! Bu səhifədə həm publisistik yazılarımı və televiziya verilişlərimi <strong>pulsuz</strong> izləyə, həm də bədii kitablarımı, tərcümələrimi və yazıçı Əlfi Qasımovun əsərlərini cəmi <strong>1 AZN</strong> ödəməklə tam şəkildə oxuya bilərsiniz.</p>
+    </div>
+
+    <h2 class="section-heading" id="currentHeading">Bütün Əsərlər və Verilişlər</h2>
+    <div class="items-grid" id="itemsContainer"></div>
+</div>
+
+<!-- Oxu və Video Pəncərəsi -->
+<div id="readerModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle">Başlıq</h2>
+        
+        <!-- Video Pəncərəsi (Yalnız TV bölməsi üçün açılır) -->
+        <div id="videoArea" style="display: none;">
+            <div class="video-wrapper">
+                <iframe id="youtubeFrame" src="" allowfullscreen></iframe>
+            </div>
