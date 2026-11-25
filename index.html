@@ -6,18 +6,13 @@
     <title>İlqar Əlfioğlu — Rəsmi Ədəbiyyat, Tərcümə və Televiziya Arxivi</title>
     <style>
         :root {
-            --bg-color: #f7f2e7;
-            --paper-bg: #fffdf9;
-            --header-bg: #f1e8d7;
-            --text-color: #2b2118;
-            --muted-text: #5c4b3c;
-            --accent-color: #8b3a2b;
-            --gold-border: #c5a059;
-            --border-color: #dcd0ba;
-        }
-
-        * {
-            box-sizing: border-box;
+            --bg-color: #f6f1e7;
+            --paper-color: #fcf9f2;
+            --text-color: #2b211a;
+            --muted-text: #635347;
+            --accent-color: #7c2d26;
+            --gold-accent: #9c7a44;
+            --border-color: #d8ccb8;
         }
 
         body {
@@ -29,29 +24,28 @@
             line-height: 1.75;
         }
 
-        /* Jurnal Üz Qabığı Başlığı */
+        /* Jurnal Üslubunda Üz Qabığı */
         header {
-            background-color: var(--header-bg);
-            border-bottom: 3px double var(--gold-border);
-            padding: 30px 20px 25px;
-            box-shadow: 0 3px 12px rgba(43, 33, 24, 0.06);
+            background-color: var(--paper-color);
+            border-bottom: 3px double var(--gold-accent);
+            padding: 25px 20px 20px;
+            box-shadow: 0 2px 12px rgba(43, 33, 26, 0.06);
         }
 
-        .journal-top-bar {
+        .top-bar {
             text-align: center;
-            font-size: 0.95em;
+            font-size: 0.85em;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: var(--accent-color);
+            color: var(--gold-accent);
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 10px;
-            margin: 0 auto 25px;
-            max-width: 980px;
-            font-weight: bold;
+            padding-bottom: 8px;
+            margin: 0 auto 22px;
+            max-width: 1020px;
         }
 
-        .cover-grid {
-            max-width: 980px;
+        .header-grid {
+            max-width: 1020px;
             margin: 0 auto;
             display: flex;
             align-items: center;
@@ -61,25 +55,26 @@
 
         .author-box {
             text-align: center;
-            width: 190px;
+            width: 185px;
             flex-shrink: 0;
         }
 
         .portrait-frame {
-            width: 135px;
-            height: 165px;
+            width: 138px;
+            height: 162px;
             margin: 0 auto 10px;
             padding: 5px;
-            background: var(--paper-bg);
-            border: 2px solid var(--gold-border);
+            border: 1px solid var(--gold-accent);
+            background: #fff;
             border-radius: 6px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
         }
 
         .portrait-frame img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center 18%;
             border-radius: 3px;
             display: block;
         }
@@ -88,48 +83,47 @@
             font-size: 1.15em;
             font-weight: bold;
             color: var(--text-color);
-            margin: 4px 0 2px;
-        }
-
-        .author-role {
-            font-size: 0.92em;
-            color: var(--muted-text);
             margin: 0;
         }
 
-        .center-title-box {
+        .author-role {
+            font-size: 0.88em;
+            color: var(--muted-text);
+            margin: 2px 0 0;
+        }
+
+        .center-title {
             text-align: center;
             flex-grow: 1;
-            padding: 0 15px;
+            padding: 0 10px;
         }
 
         .ornament {
-            color: var(--gold-border);
-            font-size: 1.3em;
+            color: var(--gold-accent);
+            font-size: 1.2em;
             letter-spacing: 6px;
             margin: 6px 0;
         }
 
-        .center-title-box h1 {
-            margin: 5px 0;
-            font-size: 2.5em;
+        .center-title h1 {
+            margin: 6px 0;
+            font-size: 2.35em;
             color: var(--accent-color);
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             font-weight: bold;
         }
 
-        .center-subtitle {
-            margin: 8px 0;
-            font-size: 1.18em;
-            font-style: italic;
+        .center-title p {
+            margin: 6px 0 0;
+            font-size: 1.12em;
             color: var(--muted-text);
-            font-family: 'Times New Roman', Times, serif;
+            font-style: normal;
         }
 
         /* Bölmələr Menyusu */
         nav {
-            background-color: #ebe0cc;
-            border-bottom: 1px solid var(--gold-border);
+            background-color: #efe7d8;
+            border-bottom: 1px solid var(--border-color);
             padding: 12px 15px;
         }
 
@@ -140,81 +134,79 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 8px;
         }
 
-        .nav-group {
+        .nav-left, .nav-right {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
         }
 
         .nav-btn {
-            background-color: var(--paper-bg);
+            background-color: var(--paper-color);
             color: var(--text-color);
-            border: 1px solid var(--gold-border);
-            padding: 8px 14px;
+            border: 1px solid var(--gold-accent);
+            padding: 7px 14px;
             border-radius: 4px;
             cursor: pointer;
             font-family: 'Times New Roman', Times, serif;
-            font-size: 1.02em;
+            font-size: 0.98em;
             transition: all 0.2s;
         }
 
         .nav-btn:hover, .nav-btn.active {
             background-color: var(--accent-color);
-            color: #ffffff;
+            color: #fffdf9;
             border-color: var(--accent-color);
         }
 
         .nav-btn-elfi {
-            border: 1px solid var(--accent-color);
+            border-color: var(--accent-color);
             font-weight: bold;
         }
 
         .container {
-            max-width: 980px;
-            margin: 30px auto;
+            max-width: 1020px;
+            margin: 28px auto;
             padding: 0 20px;
         }
 
         .intro {
-            background: var(--paper-bg);
-            padding: 20px 28px;
+            background: var(--paper-color);
+            padding: 18px 25px;
             border-radius: 6px;
             border: 1px solid var(--border-color);
-            border-left: 4px solid var(--gold-border);
-            border-right: 4px solid var(--gold-border);
-            margin-bottom: 30px;
+            border-left: 4px solid var(--gold-accent);
+            margin-bottom: 28px;
             text-align: center;
-            font-size: 1.1em;
+            font-size: 1.06em;
         }
 
         .section-heading {
-            border-bottom: 2px solid var(--gold-border);
+            border-bottom: 2px solid var(--border-color);
             padding-bottom: 8px;
             margin-bottom: 22px;
             color: var(--accent-color);
-            font-size: 1.65em;
-            text-align: center;
+            font-size: 1.55em;
         }
 
         .items-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
             gap: 22px;
         }
 
         .card {
-            background: var(--paper-bg);
+            background: var(--paper-color);
             border: 1px solid var(--border-color);
-            border-top: 3px solid var(--gold-border);
+            border-top: 3px solid var(--gold-accent);
             border-radius: 6px;
-            padding: 22px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            box-shadow: 0 3px 8px rgba(43, 33, 24, 0.05);
+            box-shadow: 0 2px 8px rgba(43, 33, 26, 0.05);
         }
 
         .tag-row {
@@ -225,54 +217,53 @@
         }
 
         .book-tag {
-            background: #f3ead8;
+            background: #efe7d8;
             color: var(--accent-color);
-            font-size: 0.9em;
-            padding: 3px 10px;
-            border-radius: 4px;
-            border: 1px solid #e2d3b5;
+            font-size: 0.85em;
+            padding: 3px 9px;
+            border-radius: 3px;
             font-weight: bold;
         }
 
         .price-tag {
-            font-size: 0.9em;
+            font-size: 0.88em;
             font-weight: bold;
-            padding: 3px 10px;
-            border-radius: 4px;
+            padding: 3px 9px;
+            border-radius: 3px;
         }
 
         .price-paid {
-            background: #fdf2f0;
-            color: #8b3a2b;
-            border: 1px solid #e4bdb5;
+            background: #f9ebe9;
+            color: #8c261e;
+            border: 1px solid #dfb4af;
         }
 
         .price-free {
-            background: #eef6ee;
-            color: #256825;
-            border: 1px solid #b6dab6;
+            background: #eaf4ea;
+            color: #236123;
+            border: 1px solid #b4d6b4;
         }
 
         .card h3 {
             margin: 0 0 10px;
-            font-size: 1.35em;
+            font-size: 1.3em;
             color: var(--text-color);
         }
 
         .card p {
-            font-size: 1.05em;
+            font-size: 1em;
             color: var(--muted-text);
             margin-bottom: 20px;
         }
 
         .btn {
             background-color: var(--accent-color);
-            color: #ffffff;
+            color: #fffdf9;
             border: none;
             padding: 10px 16px;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 1.02em;
+            font-size: 1em;
             font-family: 'Times New Roman', Times, serif;
             text-align: center;
             text-decoration: none;
@@ -280,7 +271,7 @@
         }
 
         .btn:hover {
-            background-color: #6d2b1f;
+            background-color: #5e201b;
         }
 
         .btn-video {
@@ -300,26 +291,26 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(25, 18, 12, 0.78);
+            background-color: rgba(25, 18, 14, 0.78);
             overflow-y: auto;
         }
 
         .modal-content {
-            background-color: var(--paper-bg);
+            background-color: var(--paper-color);
             margin: 35px auto;
-            padding: 32px;
-            border: 2px solid var(--gold-border);
+            padding: 30px;
             border-radius: 6px;
+            border: 2px solid var(--gold-accent);
             max-width: 780px;
             position: relative;
-            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.35);
         }
 
         .close-btn {
             position: absolute;
             right: 20px;
             top: 15px;
-            font-size: 30px;
+            font-size: 28px;
             cursor: pointer;
             color: var(--muted-text);
         }
@@ -328,7 +319,7 @@
             -webkit-user-select: none;
             -ms-user-select: none;
             user-select: none;
-            font-size: 1.18em;
+            font-size: 1.15em;
             line-height: 1.85;
             text-align: justify;
             margin-top: 20px;
@@ -339,7 +330,7 @@
             height: auto;
             display: block;
             margin: 20px auto;
-            border-radius: 6px;
+            border-radius: 4px;
             pointer-events: none;
         }
 
@@ -349,7 +340,7 @@
             height: 0;
             overflow: hidden;
             margin-top: 20px;
-            border-radius: 6px;
+            border-radius: 4px;
             background: #000;
         }
 
@@ -363,8 +354,8 @@
         }
 
         .paywall-box {
-            background-color: #f5efe2;
-            border: 2px dashed var(--gold-border);
+            background-color: #f3ece0;
+            border: 1px dashed var(--accent-color);
             padding: 25px;
             border-radius: 6px;
             margin-top: 25px;
@@ -372,11 +363,11 @@
         }
 
         .card-number {
-            background: #ffffff;
-            padding: 10px 18px;
-            border: 1px solid var(--gold-border);
+            background: #fff;
+            padding: 10px 16px;
+            border: 1px solid var(--gold-accent);
             border-radius: 4px;
-            font-size: 1.25em;
+            font-size: 1.2em;
             font-weight: bold;
             letter-spacing: 1px;
             display: inline-block;
@@ -393,16 +384,16 @@
 
         .password-area input {
             padding: 10px;
-            font-size: 1.05em;
+            font-size: 1em;
             font-family: 'Times New Roman', Times, serif;
-            border: 1px solid var(--gold-border);
+            border: 1px solid var(--gold-accent);
             border-radius: 4px;
-            width: 220px;
+            width: 210px;
         }
 
         .whatsapp-btn {
             background-color: #25D366;
-            color: #ffffff;
+            color: white;
             display: inline-block;
             margin-top: 10px;
         }
@@ -413,16 +404,16 @@
 
         footer {
             text-align: center;
-            padding: 30px 20px;
+            padding: 28px 20px;
             color: var(--muted-text);
-            font-size: 1em;
-            margin-top: 45px;
-            background-color: var(--header-bg);
-            border-top: 3px double var(--gold-border);
+            font-size: 0.95em;
+            margin-top: 40px;
+            border-top: 3px double var(--gold-accent);
+            background-color: var(--paper-color);
         }
 
-        @media (max-width: 760px) {
-            .cover-grid {
+        @media (max-width: 720px) {
+            .header-grid {
                 flex-direction: column;
             }
             .nav-inner {
@@ -438,31 +429,28 @@
 <body oncontextmenu="return false;">
 
 <header>
-    <div class="journal-top-bar">Ədəbiyyat • Tərcümə • Televiziya — Rəsmi Arxiv və Oxu Zalı</div>
-    <div class="cover-grid">
-        <!-- Sol tərəf: İlqar Əlfioğlu -->
+    <div class="top-bar">Ədəbiyyat &bull; Tərcümə &bull; Televiziya &mdash; Rəsmi Arxiv və Oxu Zalı</div>
+    <div class="header-grid">
         <div class="author-box">
             <div class="portrait-frame">
                 <img src="ilqar.jpg" alt="İlqar Əlfioğlu">
             </div>
-            <div class="author-name">İlqar Əlfioğlu</div>
+            <p class="author-name">İlqar Əlfioğlu</p>
             <p class="author-role">Yazıçı, tərcüməçi, publisist</p>
         </div>
 
-        <!-- Mərkəz: Jurnal Başlığı -->
-        <div class="center-title-box">
-            <div class="ornament">❖ ❧ ❖</div>
+        <div class="center-title">
+            <div class="ornament">&#10070; &#10087; &#10070;</div>
             <h1>Söz və Yaddaş Arxivi</h1>
-            <p class="center-subtitle">Bədii əsərlər, tərcümələr, publisistika və televiziya irsi</p>
-            <div class="ornament">✦ ✦ ✦</div>
+            <p>Bədii əsərlər, tərcümələr, publisistika və televiziya irsi</p>
+            <div class="ornament">&#10022; &#10022; &#10022;</div>
         </div>
 
-        <!-- Sağ tərəf: Əlfi Qasımov -->
         <div class="author-box">
             <div class="portrait-frame">
                 <img src="əlfi.jpg" alt="Əlfi Qasımov">
             </div>
-            <div class="author-name">Əlfi Qasımov</div>
+            <p class="author-name">Əlfi Qasımov</p>
             <p class="author-role">Yazıçı, ədəbi irs</p>
         </div>
     </div>
@@ -470,14 +458,14 @@
 
 <nav id="categoryNav">
     <div class="nav-inner">
-        <div class="nav-group">
+        <div class="nav-left">
             <button class="nav-btn active" onclick="filterItems('all', this)">Bütün Bölmələr</button>
             <button class="nav-btn" onclick="filterItems('bedii', this)">Bədii əsərlər və oçerklər</button>
             <button class="nav-btn" onclick="filterItems('tercume', this)">Tərcümələr</button>
             <button class="nav-btn" onclick="filterItems('publisistika', this)">Publisistika (Pulsuz)</button>
             <button class="nav-btn" onclick="filterItems('tv', this)">Televiziya verilişləri və filmlər</button>
         </div>
-        <div class="nav-group">
+        <div class="nav-right">
             <button class="nav-btn nav-btn-elfi" onclick="filterItems('elfi', this)">Əlfi Qasımovun bədii əsərləri</button>
         </div>
     </div>
@@ -505,128 +493,132 @@
         </div>
 
         <div id="textArea">
-            <div class="protected-text" id="modalPreview"></div>
-
+            <div class="protected-text" id="previewText"></div>
+            
             <div class="paywall-box" id="paywallSection">
-                <h3 style="margin-top:0; color: var(--accent-color);">Tam mətni oxumaq üçün (1 AZN)</h3>
+                <h3 style="margin-top: 0; color: var(--accent-color);">Tam mətni oxumaq üçün (1 AZN)</h3>
                 <p>Aşağıdakı kart hesabına <strong>1 AZN</strong> ödəniş edib qəbzi WhatsApp-a göndərin, sizə dərhal oxu şifrəsi təqdim olunacaq:</p>
                 <div class="card-number">4169 7388 XXXX XXXX</div>
                 <br>
-                <a href="https://wa.me/994500000000?text=Salam,%201%20AZN%20odenis%20etdim,%20sifre%20isteyirem" target="_blank" class="btn whatsapp-btn">WhatsApp ilə qəbz göndər</a>
+                <a id="whatsappLink" href="#" target="_blank" class="btn whatsapp-btn">WhatsApp ilə qəbz göndər</a>
                 
                 <div class="password-area">
-                    <input type="text" id="passwordInput" placeholder="Şifrəni daxil edin...">
-                    <button class="btn" onclick="unlockBook()">Mətni Aç</button>
+                    <input type="text" id="passwordInput" placeholder="Oxu şifrəsini daxil edin...">
+                    <button class="btn" onclick="unlockFullText()">Mətni Aç</button>
                 </div>
-                <p id="errorMsg" style="color: #8b3a2b; font-size: 0.95em; display: none; margin-top: 10px;">Şifrə yanlışdır. Zəhmət olmasa yenidən yoxlayın.</p>
+                <p id="errorMsg" style="color: #a32a2a; display: none; margin-top: 10px;">Şifrə yanlışdır. Zəhmət olmasa yenidən yoxlayın.</p>
             </div>
 
-            <div class="protected-text" id="modalFullText" style="display: none;"></div>
+            <div class="protected-text" id="fullText" style="display: none;"></div>
         </div>
     </div>
 </div>
 
 <footer>
-    <div class="ornament" style="margin-bottom: 8px;">❖ ❧ ❖</div>
-    © 2026 İlqar Əlfioğlu. Bütün hüquqlar qorunur. Mətnlərin icazəsiz kopyalanması və yayılması qadağandır.
+    <div class="ornament" style="margin-bottom: 8px;">&#10070; &#10087; &#10070;</div>
+    <p>&copy; 2026 İlqar Əlfioğlu. Bütün hüquqlar qorunur. Mətnlərin icazəsiz kopyalanması və yayılması qadağandır.</p>
 </footer>
 
 <script>
     const archiveItems = [
         {
             id: 1,
-            category: 'bedii',
-            tag: 'Bədii əsər',
-            isFree: false,
-            title: 'Nümunə Povest və ya Hekayə',
-            desc: 'Buraya əsərin qısa təsviri və yazılma tarixi əlavə olunacaq.',
-            password: '123',
-            preview: '<p>Bu hissədə oxucular üçün əsərin ilk səhifələri pulsuz nümayiş etdiriləcək...</p>',
-            fullText: '<p>Bu hissədə əsərin tam mətni şifrə daxil edildikdən sonra açılacaq.</p>'
+            category: "bedii",
+            categoryLabel: "Bədii əsərlər və oçerklər",
+            title: "Nümunə Bədii Əsər (Tezliklə)",
+            summary: "Bu bölmədə bədii nəsr nümunələri və ədəbi oçerklər yer alacaq.",
+            isPaid: true,
+            password: "123",
+            preview: "<p>Burada əsərin giriş hissəsi və oxucular üçün pulsuz tanışlıq parçası yerləşəcək...</p>",
+            full: "<p>Burada əsərin tam mətni yerləşəcək.</p>"
         },
         {
             id: 2,
-            category: 'tercume',
-            tag: 'Tərcümə',
-            isFree: false,
-            title: 'Dünya Ədəbiyyatından Tərcümə',
-            desc: 'Müəllif və tərcümə haqqında qısa məlumat.',
-            password: '123',
-            preview: '<p>Tərcümə əsərinin giriş hissəsi...</p>',
-            fullText: '<p>Tərcümə əsərinin tam mətni...</p>'
+            category: "tercume",
+            categoryLabel: "Tərcümələr",
+            title: "Nümunə Tərcümə Əsəri (Tezliklə)",
+            summary: "Dünya ədəbiyyatından seçilmiş tərcümə nümunələri.",
+            isPaid: true,
+            password: "123",
+            preview: "<p>Burada tərcümə əsərinin giriş hissəsi yerləşəcək...</p>",
+            full: "<p>Burada tərcümə əsərinin tam mətni yerləşəcək.</p>"
         },
         {
             id: 3,
-            category: 'publisistika',
-            tag: 'Publisistika',
-            isFree: true,
-            title: 'Nümunə Publisistik Məqalə',
-            desc: 'Mətbuatda dərc olunmuş məqalələr və esselər.',
-            preview: '<p>Publisistik məqalənin tam mətni oxucular üçün tamamilə açıqdır.</p>'
+            category: "publisistika",
+            categoryLabel: "Publisistika",
+            title: "Nümunə Publisistik Yazı (Pulsuz)",
+            summary: "Ədəbi-tənqidi məqalələr, xatirələr və publisistik düşüncələr.",
+            isPaid: false,
+            preview: "<p>Bu bölmədəki bütün publisistik yazılar oxucular üçün tam açıq və pulsuzdur.</p>"
         },
         {
             id: 4,
-            category: 'tv',
-            tag: 'Televiziya Arxivi',
-            isFree: true,
-            title: 'Müəllif Verilişi (Arxiv)',
-            desc: 'Televiziya verilişləri və sənədli filmlərdən nümunə.',
-            youtubeId: ''
+            category: "tv",
+            categoryLabel: "Televiziya verilişləri",
+            title: "Nümunə Televiziya Verilişi (Pulsuz)",
+            summary: "Televiziya arxivindən seçilmiş verilişlər və sənədli filmlər.",
+            isVideo: true,
+            youtubeId: ""
         },
         {
             id: 5,
-            category: 'elfi',
-            tag: 'Əlfi Qasımov',
-            isFree: false,
-            title: 'Əlfi Qasımov — Seçilmiş Əsər',
-            desc: 'Yazıçı Əlfi Qasımovun ədəbi irsindən nümunə.',
-            password: '123',
-            preview: '<p>Əsərin başlanğıc hissəsi...</p>',
-            fullText: '<p>Əsərin tam mətni...</p>'
+            category: "elfi",
+            categoryLabel: "Əlfi Qasımovun əsərləri",
+            title: "Əlfi Qasımov — Nümunə Əsər (Tezliklə)",
+            summary: "Yazıçı Əlfi Qasımovun zəngin bədii yaradıcılığından nümunələr.",
+            isPaid: true,
+            password: "123",
+            preview: "<p>Burada yazıçı Əlfi Qasımovun əsərindən giriş parçası yerləşəcək...</p>",
+            full: "<p>Burada əsərin tam mətni yerləşəcək.</p>"
         }
     ];
 
     let currentItem = null;
+    const whatsappPhone = "994500000000";
 
-    function renderItems(items) {
+    function renderItems(category = 'all') {
         const container = document.getElementById('itemsContainer');
         container.innerHTML = '';
-        items.forEach(item => {
-            const priceBadge = item.isFree
-                ? '<span class="price-tag price-free">Pulsuz</span>'
-                : '<span class="price-tag price-paid">1 AZN</span>';
-            const btnClass = item.category === 'tv' ? 'btn btn-video' : 'btn';
-            const btnText = item.category === 'tv' ? 'Verilişi izlə' : 'Oxu';
 
-            container.innerHTML += `
-                <div class="card">
-                    <div>
-                        <div class="tag-row">
-                            <span class="book-tag">${item.tag}</span>
-                            ${priceBadge}
-                        </div>
-                        <h3>${item.title}</h3>
-                        <p>${item.desc}</p>
+        const filtered = category === 'all' 
+            ? archiveItems 
+            : archiveItems.filter(item => item.category === category);
+
+        filtered.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'card';
+
+            const priceBadge = item.isPaid 
+                ? '<span class="price-tag price-paid">1 AZN</span>' 
+                : '<span class="price-tag price-free">Pulsuz</span>';
+
+            const btnClass = item.isVideo ? 'btn btn-video' : 'btn';
+            const btnText = item.isVideo ? 'Verilişi izlə' : 'Oxu';
+
+            card.innerHTML = `
+                <div>
+                    <div class="tag-row">
+                        <span class="book-tag">${item.categoryLabel}</span>
+                        ${priceBadge}
                     </div>
-                    <button class="${btnClass}" onclick="openItem(${item.id})">${btnText}</button>
+                    <h3>${item.title}</h3>
+                    <p>${item.summary}</p>
                 </div>
+                <button class="${btnClass}" onclick="openModal(${item.id})">${btnText}</button>
             `;
+            container.appendChild(card);
         });
     }
 
-    function filterItems(cat, btn) {
+    function filterItems(category, btn) {
         document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         document.getElementById('currentHeading').innerText = btn.innerText;
-
-        if (cat === 'all') {
-            renderItems(archiveItems);
-        } else {
-            renderItems(archiveItems.filter(i => i.category === cat));
-        }
+        renderItems(category);
     }
 
-    function openItem(id) {
+    function openModal(id) {
         currentItem = archiveItems.find(i => i.id === id);
         if (!currentItem) return;
 
@@ -634,35 +626,37 @@
         document.getElementById('errorMsg').style.display = 'none';
         document.getElementById('passwordInput').value = '';
 
-        if (currentItem.category === 'tv') {
+        if (currentItem.isVideo) {
             document.getElementById('videoArea').style.display = 'block';
             document.getElementById('textArea').style.display = 'none';
-            document.getElementById('youtubeFrame').src = currentItem.youtubeId
-                ? `https://www.youtube.com/embed/${currentItem.youtubeId}`
+            document.getElementById('youtubeFrame').src = currentItem.youtubeId 
+                ? `https://www.youtube.com/embed/${currentItem.youtubeId}` 
                 : '';
         } else {
             document.getElementById('videoArea').style.display = 'none';
             document.getElementById('textArea').style.display = 'block';
-            document.getElementById('modalPreview').innerHTML = currentItem.preview || '';
+            document.getElementById('previewText').innerHTML = currentItem.preview || '';
 
-            if (currentItem.isFree) {
-                document.getElementById('paywallSection').style.display = 'none';
-                document.getElementById('modalFullText').style.display = 'none';
-            } else {
+            if (currentItem.isPaid) {
                 document.getElementById('paywallSection').style.display = 'block';
-                document.getElementById('modalFullText').style.display = 'none';
-                document.getElementById('modalFullText').innerHTML = currentItem.fullText || '';
+                document.getElementById('fullText').style.display = 'none';
+                document.getElementById('fullText').innerHTML = currentItem.full || '';
+                const msg = encodeURIComponent(`Salam! "${currentItem.title}" əsərini oxumaq üçün 1 AZN ödəniş etdim.`);
+                document.getElementById('whatsappLink').href = `https://wa.me/${whatsappPhone}?text=${msg}`;
+            } else {
+                document.getElementById('paywallSection').style.display = 'none';
+                document.getElementById('fullText').style.display = 'none';
             }
         }
 
         document.getElementById('readerModal').style.display = 'block';
     }
 
-    function unlockBook() {
-        const val = document.getElementById('passwordInput').value.trim();
-        if (currentItem && val === currentItem.password) {
+    function unlockFullText() {
+        const input = document.getElementById('passwordInput').value.trim();
+        if (currentItem && input === currentItem.password) {
             document.getElementById('paywallSection').style.display = 'none';
-            document.getElementById('modalFullText').style.display = 'block';
+            document.getElementById('fullText').style.display = 'block';
             document.getElementById('errorMsg').style.display = 'none';
         } else {
             document.getElementById('errorMsg').style.display = 'block';
@@ -674,7 +668,14 @@
         document.getElementById('youtubeFrame').src = '';
     }
 
-    renderItems(archiveItems);
+    window.onclick = function(event) {
+        const modal = document.getElementById('readerModal');
+        if (event.target === modal) {
+            closeModal();
+        }
+    };
+
+    renderItems('all');
 </script>
 
 </body>
